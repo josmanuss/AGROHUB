@@ -88,9 +88,33 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
 
+    <!-- EDITAR PRODUCTO -->
+    <string name="titulo_ep">Editar Producto</string>
+    <string name="ep_namePro">Nombre del Producto</string>
+    <string name="ep_cat">Categira</string>
+    <string name="ep_pre">Precio (S/)</string>
+    <string name="ep_can">Cantidad</string>
+    <string name="ep_des">Descripción</string>
+    <string name="ep_moIma">Modificar Imagen</string>
+    <string name="ep_btn_sele">Seleccionar Archivo</string>
+    <string name="ep_btn_a">Agregar Producto</string>
+    <string name="ep_btn_c">Cancelar</string>
+
+    <!-- EDITAR PERFIL DE USUARIO -->
+    <string name="titulo_epu">Editar Perfil de Usuario</string>
+    <string name="epu_nameuser">Nombre del Usuario</string>
+    <string name="epu_dir">Dirección</string>
+    <string name="epu_pre">Teléfono</string>
+    <string name="epu_cont">Contraseña</string>
+    <string name="epu_btn_a">Actulizar Información</string>
+    <string name="epu_btn_c">Cancelar</string>
+
+
+
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
 
 
 </resources>
