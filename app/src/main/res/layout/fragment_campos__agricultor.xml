@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Pantalla_AgricultorFragment">
-
+    tools:context=".Campos_AgricultorFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -46,7 +45,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Profile Image -->
             <ImageView
                 android:id="@+id/profile_image"
                 android:layout_width="98dp"
@@ -58,17 +56,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/linearLayout2" />
 
-            <TextView
-                android:id="@+id/tvSelectImageLabel"
-                android:layout_width="148dp"
-                android:layout_height="22dp"
-                android:background="@drawable/border"
-                android:gravity="center_horizontal"
-                android:text="Seleccionar Archivo"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                app:layout_constraintTop_toBottomOf="@id/profile_image" />
-
             <!-- Nombre Label -->
             <TextView
                 android:id="@+id/nombre_label"
@@ -78,7 +65,7 @@
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvSelectImageLabel" />
+                app:layout_constraintTop_toBottomOf="@id/profile_image" />
 
             <!-- Nombre EditText -->
             <EditText
@@ -241,6 +228,7 @@
                 android:minHeight="48dp"
                 android:padding="10dp"
                 android:textColor="@color/black"
+                android:inputType="textEmailAddress"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/correo_label" />
@@ -253,7 +241,7 @@
                 android:layout_marginTop="16dp"
                 android:backgroundTint="@color/verde"
                 android:padding="10dp"
-                android:text="@string/btnactualizarcontra"
+                android:text="@string/btnagregarinfo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/correo" />
@@ -263,7 +251,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/editar"
+                android:text="@string/InfoAgr"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"

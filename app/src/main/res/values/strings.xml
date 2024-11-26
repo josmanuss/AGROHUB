@@ -95,10 +95,12 @@
     <string name="correo">correo</string>
     <string name="nombres">Nombre:</string>
     <string name="apellidos">apellidos</string>
-    <string name="celular">Telefono de contacto:</string>
+    <string name="celular">Telefono:</string>
     <string name="btnactualizarcontra">Actualizar Perfil</string>
+
+    <string name="btnagregarinfo">Agregar Informaciòn</string>
     <string name="cultivo_principal">Cultivo Principal:</string>
-    <string name="hectareas_trabajadas">Hectáreas Trabajadas:</string>
+    <string name="hectareas_trabajadas">Hectáreas:</string>
     <string name="experiencia">Experiencia:</string>
     <string name="ubicacion">Ubicación:</string>
     <string name="historial">Historial de ventas</string>
@@ -108,6 +110,10 @@
     <string name="anterior">Anterior</string>
     <string name="siguiente">Siguiente</string>
     <string name="uno">1</string>
+    <string name="InfoAgr">Agricultor</string>
+
+
+
 
 
 </resources>
