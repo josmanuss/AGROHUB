@@ -9,40 +9,7 @@
     <string name="previous">Previous</string>
 
     <string name="lorem_ipsum">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
-        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
-        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
-        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
-        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
-        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
-        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
-        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
-        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
-        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
-        bibendum, vel congue leo egestas.\n\n
-        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
-        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
-        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
-        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
-        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
-        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
-        est.\n\n
-        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
-        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
-        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
-        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
-        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
-        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
-        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
-        convallis.\n\n
-        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
-        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
-        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
-        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
-        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
-        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+        Lorem.
     </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -109,11 +76,38 @@
     <string name="epu_btn_c">Cancelar</string>
 
 
-
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
 
+    <string name="app_title">Asistencia para Agricultores</string>
+    <string name="general_inquiries">Consultas Generales: Para preguntas sobre el uso de la plataforma, consulta nuestra sección de Preguntas Frecuentes.</string>
+    <string name="technical_assistance">Asesoría Técnica: Si necesitas ayuda con problemas técnicos, contáctanos a través de nuestro formulario de contacto.</string>
+    <string name="support_phone">Teléfono de Soporte: Llámanos al 555-5678 para asistencia inmediata.</string>
+    <string name="problem_description_hint">Describe tu problema aquí</string>
+    <string name="email_hint">Correo electrónico</string>
+    <string name="send_request_button">Enviar Solicitud</string>
+    <string name="status_message_empty_fields">Por favor, complete todos los campos.</string>
+    <string name="status_message_success">Solicitud enviada con éxito.</string>
+    <string name="perfil">perfil</string> <!-- Fixed the tag -->
+    <string name="documento">DNI</string>
+    <string name="usuario">usuario</string>
+    <string name="correo">correo</string>
+    <string name="nombres">Nombre:</string>
+    <string name="apellidos">apellidos</string>
+    <string name="celular">Telefono de contacto:</string>
+    <string name="btnactualizarcontra">Actualizar Perfil</string>
+    <string name="cultivo_principal">Cultivo Principal:</string>
+    <string name="hectareas_trabajadas">Hectáreas Trabajadas:</string>
+    <string name="experiencia">Experiencia:</string>
+    <string name="ubicacion">Ubicación:</string>
+    <string name="historial">Historial de ventas</string>
+    <string name="logo_description">Descripciòn</string>
+    <string name="editar">Editar Perfil de Agriculto</string>
+    <string name="buscar">Buscar</string>
+    <string name="anterior">Anterior</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="uno">1</string>
 
 
 </resources>
