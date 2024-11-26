@@ -113,6 +113,10 @@
     <string name="InfoAgr">Agricultor</string>
 
 
+    <string-array name="user_types">
+        <item>Consumidor</item>
+        <item>Agricultor</item>
+    </string-array>
 
 
 
