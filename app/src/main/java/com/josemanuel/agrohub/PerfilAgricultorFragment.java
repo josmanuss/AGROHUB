@@ -20,7 +20,6 @@ public class PerfilAgricultorFragment extends Fragment {
     FragmentPerfilAgricultorBinding binding;
 
     public PerfilAgricultorFragment() {
-
     }
 
     @Override
