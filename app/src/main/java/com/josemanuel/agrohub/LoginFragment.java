@@ -10,8 +10,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 import com.josemanuel.agrohub.databinding.FragmentLoginBinding;
+import com.josemanuel.agrohub.datos.ApiClient;
+import com.josemanuel.agrohub.datos.ApiService;
+import com.josemanuel.agrohub.dominio.Consumidor;
+import com.josemanuel.agrohub.dominio.LoginRequest;
+
 import java.util.HashMap;
 import java.util.Objects;
+
+import retrofit2.*;
+
 
 
 public class LoginFragment extends Fragment {
@@ -31,6 +39,7 @@ public class LoginFragment extends Fragment {
         usuarios.put("josemanuel@uss.edu.pe","1234567890");
         usuarios.put("jhamirsilva@gmail.com","87654321");
         usuarios.put("jordyrodrigo@gmail.com","JORDYRODRIGO");
+        usuarios.put("brayanguzman@gmail.com","987654321");
     }
 
     @Override
@@ -66,6 +75,27 @@ public class LoginFragment extends Fragment {
 
 
                     }
+
+                    /*LoginRequest loginRequest = new LoginRequest(usuario,contrasenia);
+                    ApiService apiService = ApiClient.getClient().create(ApiService.class);
+
+                    Call<Consumidor> call = apiService.loginConsumidor(loginRequest);
+                    call.enqueue(new Callback<Consumidor>() {
+                        @Override
+                        public void onResponse(Call<Consumidor> call, Response<Consumidor> response) {
+                            if ( response.isSuccessful()){
+                                Toast.makeText(getContext(),"BIENVENIDO",Toast.LENGTH_LONG).show();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<Consumidor> call, Throwable t) {
+
+                        }
+                    });
+                    */
+
+
                     else{
                         Toast.makeText(getContext(),"INCORRECTO", Toast.LENGTH_SHORT).show();
                     }
