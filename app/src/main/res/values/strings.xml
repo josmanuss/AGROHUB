@@ -87,7 +87,6 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-
     <!-- EDITAR PRODUCTO -->
     <string name="titulo_ep">Editar Producto</string>
     <string name="ep_namePro">Nombre del Producto</string>
