@@ -135,7 +135,7 @@
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/ic_tomato"
+
                             android:layout_marginEnd="8dp"/>
 
                         <TextView
@@ -168,7 +168,7 @@
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/ic_potato"
+
                             android:layout_marginEnd="8dp"/>
 
                         <TextView

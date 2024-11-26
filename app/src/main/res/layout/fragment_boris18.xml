@@ -36,7 +36,6 @@
             android:orientation="vertical"
             android:padding="16dp"
             android:layout_margin="12dp"
-            android:background="@drawable/card_background"
             android:elevation="4dp"
             android:gravity="center">
 
@@ -45,7 +44,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/tomate"
                 android:contentDescription="Imagen del producto" />
         </LinearLayout>
 
@@ -54,7 +52,6 @@
             android:layout_width="387dp"
             android:layout_height="249dp"
             android:layout_margin="12dp"
-            android:background="@drawable/card_background"
             android:elevation="4dp"
             android:orientation="vertical"
             android:padding="16dp"
