@@ -52,10 +52,10 @@
 
             <ImageView
                 android:id="@+id/profile_image"
-                android:layout_width="86dp"
-                android:layout_height="71dp"
+                android:layout_width="98dp"
+                android:layout_height="82dp"
                 android:layout_marginTop="44dp"
-                android:src="@drawable/icono_app"
+                android:src="@drawable/agricultor_perfil"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
