@@ -113,6 +113,15 @@
         <action
             android:id="@+id/action_VistaConsumidorFragmente_to_EditarUsuarioFragment"
             app:destination="@id/EditarUsuarioFragment" />
+        <action
+            android:id="@+id/action_VistaConsumidorFragmente_to_misComprasUsuarioFragmente"
+            app:destination="@id/misComprasUsuarioFragmente" />
+        <action
+            android:id="@+id/action_VistaConsumidorFragmente_to_productosFragmente"
+            app:destination="@id/productosDisponiblesFragmente" />
+        <action
+            android:id="@+id/action_VistaConsumidorFragmente_to_carritoComprasFragmente"
+            app:destination="@id/carritoComprasFragmente" />
     </fragment>
 
     <!--Aqui falta la vista Nosotros-->
@@ -122,6 +131,9 @@
         android:name="com.josemanuel.agrohub.editarUsuarioFragment"
         android:label=""
         tools:layout="@layout/fragment_editar_usuario">
+        <action
+            android:id="@+id/action_EditarUsuarioFragment_to_VistaConsumidorFragmente"
+            app:destination="@id/VistaConsumidorFragmente" />
     </fragment>
 
     <fragment
@@ -135,13 +147,56 @@
             app:destination="@id/DescargarComprobanteFragmente" />
     </fragment>
 
+    <fragment
+        android:id="@+id/misComprasUsuarioFragmente"
+        android:label=""
+        tools:layout="@layout/fragment_jordy5">
+
+        <action
+            android:id="@+id/action_misComprasUsuarioFragmente_to_productosDisponiblesFragmente"
+            app:destination="@id/productosDisponiblesFragmente" />
+        <action
+            android:id="@+id/action_misComprasUsuarioFragmente_to_realizarPedidoFragmente"
+            app:destination="@id/realizarPedidoFragmente" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productosDisponiblesFragmente"
+        android:label=""
+        tools:layout="@layout/fragment_jordy6">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/carritoComprasFragmente"
+        android:label=""
+        tools:layout="@layout/fragment_jordy7">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/realizarPedidoFragmente"
+        android:label=""
+        tools:layout="@layout/fragment_jordy8">
+
+        <action
+            android:id="@+id/action_realizarPedidoFragmente_to_ConfirmarPagoFragment"
+            app:destination="@id/ConfirmarPagoFragment" />
+    </fragment>
+
+
+
 
     <fragment
         android:id="@+id/DescargarComprobanteFragmente"
         android:name="com.josemanuel.agrohub.DescargarComprobanteFragment"
         android:label=""
         tools:layout="@layout/fragment_descargar_comprobante">
-
+        <action
+            android:id="@+id/action_DescargarComprobanteFragmente_to_VistaConsumidorFragmente"
+            app:destination="@id/VistaConsumidorFragmente" />
     </fragment>
+
+
 
 </navigation>
