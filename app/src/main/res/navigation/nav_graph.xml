@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/PreCargaFragment">
+
+    <fragment
+        android:id="@+id/PreCargaFragment"
+        android:name="com.josemanuel.agrohub.PreCargaFragment"
+        android:label=""
+        tools:layout="@layout/fragment_pre_carga">
+        <action
+            android:id="@+id/action_PreCargaFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment"
+        />
+    </fragment>
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.josemanuel.agrohub.LoginFragment"
+        android:label=""
+        tools:layout="@layout/fragment_login" >
+
+        <action
+            android:id="@+id/action_LoginFragment_to_RegistroFragment"
+            app:destination="@id/RegistroFragment"
+            />
+        <action
+            android:id="@+id/action_LoginFragment_to_PerfilAgricultorFragment"
+            app:destination="@id/PerfilAgricultorFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/RegistroFragment"
+        android:name="com.josemanuel.agrohub.RegistroFragment"
+        android:label=""
+        tools:layout="@layout/fragment_registro">
+        <action
+            android:id="@+id/action_RegistroFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/PerfilAgricultorFragment"
+        android:name="com.josemanuel.agrohub.PerfilAgricultorFragment"
+        android:label="PerfilAgricultorFragment"
+        tools:layout="@layout/fragment_perfil_agricultor">
+        <argument
+            android:name="CORREO"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>
