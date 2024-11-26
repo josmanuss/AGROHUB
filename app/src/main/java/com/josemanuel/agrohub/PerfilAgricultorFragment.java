@@ -37,6 +37,7 @@ public class PerfilAgricultorFragment extends Fragment {
 
         binding.btnReturn.setOnClickListener(v -> {
             NavHostFragment.findNavController(PerfilAgricultorFragment.this).popBackStack();
+
         });
 
 
