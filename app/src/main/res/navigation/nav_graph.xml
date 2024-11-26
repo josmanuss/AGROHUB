@@ -63,6 +63,15 @@
         <action
             android:id="@+id/action_PerfilAgricultorFragment_to_historial_VentasFragment"
             app:destination="@id/historial_VentasFragment" />
+        <action
+            android:id="@+id/action_PerfilAgricultorFragment_to_agregarProductoFragment"
+            app:destination="@id/agregarProductoFragment" />
+        <action
+            android:id="@+id/action_PerfilAgricultorFragment_to_productoDisponibleFragment"
+            app:destination="@id/productoDisponibleFragment" />
+        <action
+            android:id="@+id/action_PerfilAgricultorFragment_to_logisticaVentaFragment"
+            app:destination="@id/logisticaVentaFragment" />
     </fragment>
 
     <fragment
@@ -87,20 +96,49 @@
         android:name="com.josemanuel.agrohub.Historial_VentasFragment"
         android:label="fragment_historial__ventas"
         tools:layout="@layout/fragment_historial__ventas">
+        <action
+            android:id="@+id/action_historial_VentasFragment_to_PerfilAgricultorFragment"
+            app:destination="@id/PerfilAgricultorFragment" />
     </fragment>
 
     <!--Aqui va la vista de agregar Producto-->
+    <fragment
+        android:id="@+id/agregarProductoFragment"
+        android:label=""
+        tools:layout="@layout/fragment_boris17">
+        <action
+            android:id="@+id/action_agregarProductoFragment_to_PerfilAgricultorFragment"
+            app:destination="@id/PerfilAgricultorFragment" />
+    </fragment>
 
     <!--Aqui va la vista de producto Disponible-->
+    <fragment
+        android:id="@+id/productoDisponibleFragment"
+        android:label=""
+        tools:layout="@layout/fragment_boris18">
+        <action
+            android:id="@+id/action_productoDisponibleFragment_to_editarProductoFragment"
+            app:destination="@id/editarProductoFragment" />
+    </fragment>
 
     <!--Aqui va la vista de Logistica de Ventas-->
-
+    <fragment
+        android:id="@+id/logisticaVentaFragment"
+        android:label=""
+        tools:layout="@layout/fragment_boris19">
+        <action
+            android:id="@+id/action_logisticaVentaFragment_to_PerfilAgricultorFragment"
+            app:destination="@id/PerfilAgricultorFragment" />
+    </fragment>
     <!--Aqui falta conectar con su anterior-->
     <fragment
         android:id="@+id/editarProductoFragment"
         android:name="com.josemanuel.agrohub.EditarProductFragment"
         android:label=""
         tools:layout="@layout/fragment_editar_product">
+        <action
+            android:id="@+id/action_editarProductoFragment_to_productoDisponibleFragment"
+            app:destination="@id/productoDisponibleFragment" />
     </fragment>
 
     <!--Aqui inician las pantallas de los agricultores-->
