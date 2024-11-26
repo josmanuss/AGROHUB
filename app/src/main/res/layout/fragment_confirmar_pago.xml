@@ -36,7 +36,7 @@
             android:id="@+id/titulo_informacion_pago"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Información de Pago"
+            android:text="Información de Pagooooo"
             android:textSize="20sp"
             android:textColor="#4CAF50"
             android:textStyle="bold"
