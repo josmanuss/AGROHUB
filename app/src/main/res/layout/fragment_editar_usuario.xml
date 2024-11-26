@@ -36,6 +36,8 @@
             android:id="@+id/menu_icon"
             android:layout_width="30dp"
             android:layout_height="30dp"
+
+
             android:layout_gravity="end"
             android:contentDescription="Menú"
             android:src="@drawable/ic_menu"
