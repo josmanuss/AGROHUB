@@ -29,7 +29,9 @@
         <action
             android:id="@+id/action_LoginFragment_to_PerfilAgricultorFragment"
             app:destination="@id/PerfilAgricultorFragment" />
-
+        <action
+            android:id="@+id/action_LoginFragment_to_VistaConsumidorFragmente"
+            app:destination="@id/VistaConsumidorFragmente" />
     </fragment>
 
     <fragment
@@ -42,6 +44,8 @@
             app:destination="@id/LoginFragment"
             />
     </fragment>
+
+    <!--Aqui inician las pantallas de los agricultores-->
     <fragment
         android:id="@+id/PerfilAgricultorFragment"
         android:name="com.josemanuel.agrohub.PerfilAgricultorFragment"
@@ -50,7 +54,94 @@
         <argument
             android:name="CORREO"
             app:argType="string" />
+        <action
+            android:id="@+id/action_PerfilAgricultorFragment_to_editarUsuarioFragment"
+            app:destination="@id/editarUsuarioFragment" />
+        <action
+            android:id="@+id/action_PerfilAgricultorFragment_to_pantalla_SoporteFragment"
+            app:destination="@id/pantalla_SoporteFragment" />
+        <action
+            android:id="@+id/action_PerfilAgricultorFragment_to_historial_VentasFragment"
+            app:destination="@id/historial_VentasFragment" />
     </fragment>
 
+    <fragment
+        android:id="@+id/editarUsuarioFragment"
+        android:name="com.josemanuel.agrohub.editarUsuarioFragment"
+        android:label="editarUsuarioFragment"
+        tools:layout="@layout/fragment_pantalla__agricultor">
+        <action
+            android:id="@+id/action_editarUsuarioFragment_to_PerfilAgricultorFragment"
+            app:destination="@id/PerfilAgricultorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pantalla_SoporteFragment"
+        android:name="com.josemanuel.agrohub.Pantalla_SoporteFragment"
+        android:label="fragment_pantalla__soporte"
+        tools:layout="@layout/fragment_pantalla__soporte">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/historial_VentasFragment"
+        android:name="com.josemanuel.agrohub.Historial_VentasFragment"
+        android:label="fragment_historial__ventas"
+        tools:layout="@layout/fragment_historial__ventas">
+    </fragment>
+
+    <!--Aqui va la vista de agregar Producto-->
+
+    <!--Aqui va la vista de producto Disponible-->
+
+    <!--Aqui va la vista de Logistica de Ventas-->
+
+    <!--Aqui falta conectar con su anterior-->
+    <fragment
+        android:id="@+id/editarProductoFragment"
+        android:name="com.josemanuel.agrohub.EditarProductFragment"
+        android:label=""
+        tools:layout="@layout/fragment_editar_product">
+    </fragment>
+
+    <!--Aqui inician las pantallas de los agricultores-->
+    <fragment
+        android:id="@+id/VistaConsumidorFragmente"
+        android:name="com.josemanuel.agrohub.VistaConsumidorFragment"
+        android:label=""
+        tools:layout="@layout/fragment_vista_consumidor">
+
+        <action
+            android:id="@+id/action_VistaConsumidorFragmente_to_EditarUsuarioFragment"
+            app:destination="@id/EditarUsuarioFragment" />
+    </fragment>
+
+    <!--Aqui falta la vista Nosotros-->
+
+    <fragment
+        android:id="@+id/EditarUsuarioFragment"
+        android:name="com.josemanuel.agrohub.editarUsuarioFragment"
+        android:label=""
+        tools:layout="@layout/fragment_editar_usuario">
+    </fragment>
+
+    <fragment
+        android:id="@+id/ConfirmarPagoFragment"
+        android:name="com.josemanuel.agrohub.ConfirmarPagoFragment"
+        android:label=""
+        tools:layout="@layout/fragment_confirmar_pago">
+
+        <action
+            android:id="@+id/action_ConfirmarPagoFragment_to_DescargarComprobanteFragmente"
+            app:destination="@id/DescargarComprobanteFragmente" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/DescargarComprobanteFragmente"
+        android:name="com.josemanuel.agrohub.DescargarComprobanteFragment"
+        android:label=""
+        tools:layout="@layout/fragment_descargar_comprobante">
+
+    </fragment>
 
 </navigation>
