@@ -40,6 +40,8 @@ public class LoginFragment extends Fragment {
         usuarios.put("jhamirsilva@gmail.com","87654321");
         usuarios.put("jordyrodrigo@gmail.com","JORDYRODRIGO");
         usuarios.put("brayanguzman@gmail.com","987654321");
+        usuarios.put("brayanguzman2@gmail.com","987654321");
+
     }
 
     @Override
