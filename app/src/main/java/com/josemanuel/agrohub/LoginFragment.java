@@ -18,6 +18,7 @@ public class LoginFragment extends Fragment {
     FragmentLoginBinding binding;
     HashMap<String, String> usuarios = null;
 
+
     public LoginFragment() {
 
     }
@@ -28,7 +29,7 @@ public class LoginFragment extends Fragment {
         super.onCreate(savedInstanceState);
         usuarios = new HashMap<>();
         usuarios.put("manuelito@gmail.com","1234567890");
-        usuarios.put("josemanuel@uss.edu.pe","1234567890");
+        usuarios.put("rguerrerojordya@uss.edu.pe","9876543210");
     }
 
     @Override
