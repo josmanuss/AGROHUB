@@ -32,6 +32,9 @@
         <action
             android:id="@+id/action_LoginFragment_to_VistaConsumidorFragmente"
             app:destination="@id/VistaConsumidorFragmente" />
+        <action
+            android:id="@+id/action_LoginFragment_to_dashboardClienteFragment"
+            app:destination="@id/dashboardClienteFragment" />
     </fragment>
 
     <fragment
@@ -160,6 +163,8 @@
         <action
             android:id="@+id/action_VistaConsumidorFragmente_to_carritoComprasFragmente"
             app:destination="@id/carritoComprasFragmente" />
+        <argument android:name="CORREO"
+            app:argType="string" />
     </fragment>
 
     <!--Aqui falta la vista Nosotros-->
@@ -234,7 +239,15 @@
             android:id="@+id/action_DescargarComprobanteFragmente_to_VistaConsumidorFragmente"
             app:destination="@id/VistaConsumidorFragmente" />
     </fragment>
-
+    <fragment
+        android:id="@+id/dashboardClienteFragment"
+        android:name="com.josemanuel.agrohub.DashboardClienteFragment"
+        android:label="fragment_dashboard_cliente"
+        tools:layout="@layout/fragment_dashboard_cliente" >
+        <argument
+            android:name="CORREO"
+            app:argType="string" />
+    </fragment>
 
 
 </navigation>

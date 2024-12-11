@@ -10,8 +10,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 import com.josemanuel.agrohub.databinding.FragmentLoginBinding;
+import com.josemanuel.agrohub.datos.ApiService;
+import com.josemanuel.agrohub.datos.ApiClient;
+import com.josemanuel.agrohub.dominio.LoginRequest;
+import com.josemanuel.agrohub.dominio.LoginResponse;
+
 import java.util.HashMap;
 import java.util.Objects;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class LoginFragment extends Fragment {
@@ -40,34 +49,48 @@ public class LoginFragment extends Fragment {
         binding.buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String usuario, contrasenia;
-                usuario = Objects.requireNonNull(binding.editTextUser.getText()).toString().trim();
-                contrasenia = Objects.requireNonNull(binding.editTextPassword.getText()).toString().trim();
-                if(usuario.isEmpty() &&  contrasenia.isEmpty()){
+                String _usuario, _contrasenia;
+                _usuario = Objects.requireNonNull(binding.editTextUser.getText()).toString().trim();
+                _contrasenia = Objects.requireNonNull(binding.editTextPassword.getText()).toString().trim();
+                if(_usuario.isEmpty() &&  _contrasenia.isEmpty()){
                     Toast.makeText(getContext(),"Usuario y contraseña estan en blanco", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                else if( usuario.isEmpty()){
+                else if( _usuario.isEmpty()){
                     Toast.makeText(getContext(),"Usuario en blanco", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                else if ( contrasenia.isEmpty()){
+                else if ( _contrasenia.isEmpty()){
                     Toast.makeText(getContext(),"Contraseña en blanco", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 else{
-                    if ( usuarios.containsKey(usuario) && usuarios.get(usuario).equals(contrasenia)){
-                        Toast.makeText(getContext(),usuario+" - "+contrasenia, Toast.LENGTH_SHORT).show();
-
-                        LoginFragmentDirections.ActionLoginFragmentToPerfilAgricultorFragment accion =
-                                LoginFragmentDirections.actionLoginFragmentToPerfilAgricultorFragment(usuario);
-                        NavHostFragment.findNavController(LoginFragment.this).navigate(accion);
 
 
-                    }
-                    else{
-                        Toast.makeText(getContext(),"INCORRECTO", Toast.LENGTH_SHORT).show();
-                    }
+                    LoginRequest loginRequest = new LoginRequest(_usuario,_contrasenia);
+                    ApiService apiService = ApiClient.getClient().create(ApiService.class);
+
+                    apiService.loginConsumidor(loginRequest).enqueue(new Callback<LoginResponse>() {
+                        @Override
+                        public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                            LoginResponse loginResponse = response.body();
+
+                            Toast.makeText(getContext(),loginResponse.getEmail(),Toast.LENGTH_SHORT).show();
+
+                            LoginFragmentDirections.ActionLoginFragmentToVistaConsumidorFragmente loginFragmentDirections =
+                                    LoginFragmentDirections.actionLoginFragmentToVistaConsumidorFragmente(_usuario);
+                            NavHostFragment.findNavController(LoginFragment.this).navigate(loginFragmentDirections);
+
+
+                        }
+
+                        @Override
+                        public void onFailure(Call<LoginResponse> call, Throwable t) {
+                            Toast.makeText(getContext(), "Error de conexión: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+
                 }
 
             }

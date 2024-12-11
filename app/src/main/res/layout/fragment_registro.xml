@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:fontFamily="sans-serif-medium"
-            android:text="@string/titulo_registro"
+            android:text="Registro"
             android:textSize="40sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -40,33 +40,18 @@
         <!-- Campo: Nombre -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="384dp"
+            android:layout_height="64dp"
             android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toStartOf="@+id/textInputLayout2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tituloR">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/lbl_nombre" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Campo: Apellido -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textInputLayout"
-            app:layout_constraintTop_toBottomOf="@+id/tituloR">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/lbl_apellido" />
+                android:hint="Nombre"
+                android:text="" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Campo: Email -->
@@ -80,45 +65,103 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/lbl_email" />
+                android:hint="Correo Electrónico"
+                android:text="" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Campo: Contraseña -->
+        <!-- Campo: Dirección -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            app:passwordToggleEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDireccion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="@string/lbl_contraseña" />
+                android:hint="Dirección"
+                android:text="" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Campo: Confirmar Contraseña -->
+        <!-- Campo: Teléfono -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Teléfono"
+                android:text="" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo: Nombre de Usuario -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNombreUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre de Usuario"
+                android:text="" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo: Contraseña -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout7"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             app:passwordToggleEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etContrasenia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="@string/lbl_Ccontraseña" />
+                android:hint="Contraseña"
+                android:text="" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo: Preferencias -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPreferencias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Preferencias"
+                android:text="" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Spinner: Tipo de Usuario -->
@@ -129,12 +172,12 @@
             android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout8"> <!-- El spinner se coloca debajo de Preferencias -->
 
             <Spinner
                 android:id="@+id/spinnerUserType"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="54dp"
                 android:backgroundTint="@color/green"
                 android:entries="@array/user_types" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -143,16 +186,17 @@
         <Button
             android:id="@+id/buttonEnviar"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginTop="24dp"
             android:backgroundTint="@color/green"
             android:drawableEnd="@drawable/baseline_send_24"
             android:paddingStart="20dp"
-            android:text="@string/btn_enviar"
+            android:text="Enviar"
+            android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/spinnerLayout" /> <!-- Se ajusta el botón para ir debajo del spinner -->
 
         <!-- Texto Final -->
         <TextView
@@ -160,11 +204,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/txt_YTCuenta"
+            android:text="¿Ya tienes cuenta? Inicia sesión"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonEnviar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.josemanuel.agrohub.databinding.FragmentVistaConsumidorBinding;
 
@@ -47,6 +48,9 @@ public class VistaConsumidorFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
+        String usuario = VistaConsumidorFragmentArgs.fromBundle(getArguments()).getCORREO();
+
         // Configurar el botón de menú
         Button menuButton = binding.menuButton;
         menuButton.setOnClickListener(v -> showMenuOptions());
@@ -72,6 +76,11 @@ public class VistaConsumidorFragment extends Fragment {
                     .setPositiveButton("Cerrar", (dialog, which) -> dialog.dismiss())
                     .show();
         });
+
+
+
+
+
     }
 
     // Método para mostrar el menú emergente
@@ -122,16 +131,30 @@ public class VistaConsumidorFragment extends Fragment {
         // Realiza la acción deseada según la opción seleccionada
         switch (selectedOption) {
             case "Inicio":
+
+
+
                 break;
             case "Nosotros":
                 break;
             case "Carrito de compras":
+                NavHostFragment.findNavController(VistaConsumidorFragment.this).navigate(
+                        R.id.action_VistaConsumidorFragmente_to_carritoComprasFragmente
+                );
                 break;
             case "Productos":
+                NavHostFragment.findNavController( VistaConsumidorFragment.this).navigate(
+                        R.id.action_VistaConsumidorFragmente_to_productosFragmente
+
+
+                );
                 break;
             case "Pedidos":
                 break;
             case "Cerrar sesión":
+
+
+
                 break;
         }
     }

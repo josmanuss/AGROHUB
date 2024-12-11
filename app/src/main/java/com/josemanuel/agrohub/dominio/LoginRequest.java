@@ -1,17 +1,16 @@
 package com.josemanuel.agrohub.dominio;
 
-public class LoginRequest
-{
+public class LoginRequest {
     private String usuario_email;
     private String contrasenia;
 
-
+    // Constructor
     public LoginRequest(String usuario_email, String contrasenia) {
         this.usuario_email = usuario_email;
         this.contrasenia = contrasenia;
     }
 
-
+    // Getters and Setters
     public String getUsuario_email() {
         return usuario_email;
     }
@@ -27,5 +26,4 @@ public class LoginRequest
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }
-
 }

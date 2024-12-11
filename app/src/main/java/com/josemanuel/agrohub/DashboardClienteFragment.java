@@ -36,15 +36,15 @@ public class DashboardClienteFragment extends Fragment {
 
         // Ensure the argument is correctly received
         if (getArguments() != null) {
-            // Retrieve the passed argument (email)
-            //String correo = DashboardClienteFragmentArgs.fromBundle(getArguments()).getCORREO();
+
+            String correo = DashboardClienteFragmentArgs.fromBundle(getArguments()).getCORREO();
 
 
-            //binding.greetingTextView.setText("Hola, "+correo);
+            binding.greetingTextView.setText("Hola, "+correo);
 
 
 
-            //binding.emailTextView.setText(correo);
+            binding.emailTextView.setText(correo);
         }
     }
 
