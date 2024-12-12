@@ -1,7 +1,7 @@
 package com.josemanuel.agrohub.dominio;
 
 public class LoginResponse {
-    private String id_consumidor;
+    private String id_consumidor_agricultor;
     private String id_persona;
     private String nombre;
     private String email;
@@ -10,12 +10,12 @@ public class LoginResponse {
     private String nombre_usuario;
 
     // Getters and Setters
-    public String getId_consumidor() {
-        return id_consumidor;
+    public String getId_consumidor_agricultor() {
+        return id_consumidor_agricultor;
     }
 
-    public void setId_consumidor(String id_consumidor) {
-        this.id_consumidor = id_consumidor;
+    public void setId_consumidor(String id_consumidor_agricultor) {
+        this.id_consumidor_agricultor = id_consumidor_agricultor;
     }
 
     public String getId_persona() {

@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.josemanuel.agrohub.databinding.FragmentPreCargaBinding;
 
 public class PreCargaFragment extends Fragment {
@@ -30,11 +31,28 @@ public class PreCargaFragment extends Fragment {
         binding.buttonContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(PreCargaFragment.this)
-                        .navigate(R.id.action_PreCargaFragment_to_LoginFragment);
+                mostrarDialogoSeleccion();
             }
         });
         return binding.getRoot();
+    }
+
+    private void mostrarDialogoSeleccion() {
+        new MaterialAlertDialogBuilder(requireContext())
+                .setTitle("Seleccione su tipo de usuario")
+                .setMessage("Elija una opción para continuar con la configuración del perfil")
+                .setPositiveButton("Consumidor", (dialog, which) -> {
+                    NavHostFragment.findNavController(PreCargaFragment.this)
+                            .navigate(R.id.action_PreCargaFragment_to_LoginFragment);
+                })
+                .setNeutralButton("Agricultor", (dialog, which) -> {
+                    NavHostFragment.findNavController(PreCargaFragment.this)
+                            .navigate(R.id.action_PreCargaFragment_to_LoginAgricultorFragment);
+                })
+                .setNegativeButton("Cancelar", (dialog, which) -> {
+                    dialog.dismiss();
+                })
+                .show();
     }
 
     @Override

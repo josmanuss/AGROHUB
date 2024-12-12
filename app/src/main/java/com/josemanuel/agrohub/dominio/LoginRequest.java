@@ -4,7 +4,6 @@ public class LoginRequest {
     private String usuario_email;
     private String contrasenia;
 
-    // Constructor
     public LoginRequest(String usuario_email, String contrasenia) {
         this.usuario_email = usuario_email;
         this.contrasenia = contrasenia;

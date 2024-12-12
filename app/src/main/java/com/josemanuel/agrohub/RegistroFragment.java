@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.josemanuel.agrohub.databinding.FragmentRegistroBinding;
@@ -32,6 +33,8 @@ public class RegistroFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
     }
 
     @Override
@@ -39,6 +42,7 @@ public class RegistroFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         binding = FragmentRegistroBinding.inflate(inflater, container, false);
+
         binding.YTCuenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,6 +50,8 @@ public class RegistroFragment extends Fragment {
                         .navigate(R.id.action_RegistroFragment_to_LoginFragment);
             }
         });
+
+
 
         binding.buttonEnviar.setOnClickListener(new View.OnClickListener() {
             @Override

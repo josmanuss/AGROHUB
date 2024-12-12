@@ -114,10 +114,10 @@
 
 
     <string-array name="user_types">
+        <item>SELECCIONE</item>
         <item>Consumidor</item>
         <item>Agricultor</item>
     </string-array>
-
 
 
 </resources>

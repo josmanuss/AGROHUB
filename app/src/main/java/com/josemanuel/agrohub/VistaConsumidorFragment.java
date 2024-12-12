@@ -127,13 +127,10 @@ public class VistaConsumidorFragment extends Fragment {
     }
 
     // Método para manejar la selección del menú
-    private void handleMenuSelection(String selectedOption) {
+    private void handleMenuSelection(@NonNull String selectedOption) {
         // Realiza la acción deseada según la opción seleccionada
         switch (selectedOption) {
             case "Inicio":
-
-
-
                 break;
             case "Nosotros":
                 break;
@@ -145,8 +142,6 @@ public class VistaConsumidorFragment extends Fragment {
             case "Productos":
                 NavHostFragment.findNavController( VistaConsumidorFragment.this).navigate(
                         R.id.action_VistaConsumidorFragmente_to_productosFragmente
-
-
                 );
                 break;
             case "Pedidos":

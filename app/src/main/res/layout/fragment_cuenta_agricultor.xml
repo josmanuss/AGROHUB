@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back_login"
-    tools:context=".RegistroFragment">
+    tools:context=".CuentaAgricultorFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Registro"
+            android:text="Registro Agricultor"
             android:textSize="40sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +48,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etNombre"
-                android:layout_width="match_parent"
+                android:layout_width="369dp"
                 android:layout_height="wrap_content"
                 android:hint="Nombre"
                 android:text="" />
@@ -157,10 +157,10 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etPreferencias"
+                android:id="@+id/etCertificacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Preferencias"
+                android:hint="Certificacion"
                 android:text="" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -172,15 +172,7 @@
             android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout8"> <!-- El spinner se coloca debajo de Preferencias -->
-
-            <Spinner
-                android:id="@+id/spinnerUserType"
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:backgroundTint="@color/green"
-                android:entries="@array/user_types" />
-        </com.google.android.material.textfield.TextInputLayout>
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout8"/>
 
         <!-- Botón Enviar -->
         <Button
@@ -191,7 +183,7 @@
             android:backgroundTint="@color/green"
             android:drawableEnd="@drawable/baseline_send_24"
             android:paddingStart="20dp"
-            android:text="Enviar"
+            android:text="Registrar"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
