@@ -14,6 +14,8 @@ public class ConsumidorResponse {
         private String telefono;
         private String nombre_usuario;
         private String preferencias;
+        private String rol;
+
 
         // Getters y setters
         public String getNombre() { return nombre; }
@@ -33,6 +35,9 @@ public class ConsumidorResponse {
 
         public String getPreferencias() { return preferencias; }
         public void setPreferencias(String preferencias) { this.preferencias = preferencias; }
+
+        public String getRol() {return rol;}
+        public void setRol(String rol) {this.rol = rol;}
     }
 
     // Getters y setters

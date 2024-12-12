@@ -47,6 +47,11 @@ dependencies {
     implementation(libs.converter.gson)
     implementation (libs.logging.interceptor)
 
+    implementation ("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
+
+
+
     implementation(libs.cronet.embedded)
     implementation(libs.lifecycle.livedata.ktx)
     implementation(libs.lifecycle.viewmodel.ktx)

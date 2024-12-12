@@ -13,7 +13,6 @@ public class AgricultorResponse {
         private String nombreUsuario;
         private String certificacion;
 
-
         public Data() {}
 
         // Getters y setters

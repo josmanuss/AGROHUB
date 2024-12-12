@@ -164,6 +164,25 @@
                 android:text="" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Campo Oculto: Preferencias Ocultas -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputCertificacion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCertificacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Certificacion"
+                android:visibility="gone"
+                android:text="" />
+        </com.google.android.material.textfield.TextInputLayout>
+
         <!-- Spinner: Tipo de Usuario -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/spinnerLayout"
@@ -172,7 +191,7 @@
             android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout8"> <!-- El spinner se coloca debajo de Preferencias -->
+            app:layout_constraintTop_toBottomOf="@+id/textInputCertificacion">
 
             <Spinner
                 android:id="@+id/spinnerUserType"
@@ -195,7 +214,7 @@
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerLayout" /> <!-- Se ajusta el botón para ir debajo del spinner -->
+            app:layout_constraintTop_toBottomOf="@+id/spinnerLayout" />
 
         <!-- Texto Final -->
         <TextView

@@ -5,7 +5,7 @@ import com.josemanuel.agrohub.dominio.ConsumidorRequest;
 import com.josemanuel.agrohub.dominio.ConsumidorResponse;
 import com.josemanuel.agrohub.dominio.LoginRequest;
 import com.josemanuel.agrohub.dominio.LoginResponse;
-
+import com.josemanuel.agrohub.dominio.ProductoResponse;
 
 
 import retrofit2.Call;
@@ -28,6 +28,10 @@ public interface ApiService {
     @POST("registrar_agricultor")
     Call<AgricultorResponse> registrarAgricultor(@Body AgricultorRequest agricultorRequest);
 
+    @GET("listarProductos")
+    default Call<ProductoResponse> listarProductos() {
+        return null;
+    }
 
 
 }
