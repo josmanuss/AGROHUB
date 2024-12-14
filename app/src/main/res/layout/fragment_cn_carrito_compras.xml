@@ -6,7 +6,7 @@
     android:paddingHorizontal="@dimen/activity_horizontal_margin"
     android:paddingVertical="@dimen/activity_vertical_margin">
 
-    <!-- Guías para mantener márgenes consistentes -->
+    <!-- Guías para márgenes consistentes -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineStart"
         android:layout_width="wrap_content"
@@ -21,6 +21,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="16dp" />
 
+    <!-- Título Cliente -->
     <TextView
         android:id="@+id/titleCliente"
         android:layout_width="0dp"
@@ -34,6 +35,7 @@
         app:layout_constraintStart_toStartOf="@id/guidelineStart"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Título Carrito de Compras -->
     <TextView
         android:id="@+id/titleCarrito"
         android:layout_width="0dp"
@@ -47,6 +49,7 @@
         app:layout_constraintStart_toStartOf="@id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@id/titleCliente" />
 
+    <!-- Tarjeta del Carrito -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cartCard"
         android:layout_width="0dp"
@@ -64,15 +67,18 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <!-- Botón Pedido en Revisión -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnPedidoRevision"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:text="Pedido en revisión"
+                android:text="Pedido en Revisión"
                 android:textSize="16sp"
                 app:cornerRadius="8dp" />
 
+            <!-- Contenedor de Producto -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardProducto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -89,6 +95,7 @@
                     android:padding="8dp">
 
                     <TextView
+                        android:id="@+id/productName"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -96,19 +103,17 @@
                         android:textSize="16sp" />
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnDecrement"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:insetLeft="0dp"
-                        android:insetTop="0dp"
-                        android:insetRight="0dp"
-                        android:insetBottom="0dp"
                         android:padding="0dp"
                         android:text="-"
                         android:textSize="20sp"
                         app:cornerRadius="24dp" />
 
                     <TextView
+                        android:id="@+id/productQuantity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="12dp"
@@ -117,19 +122,17 @@
                         android:textStyle="bold" />
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnIncrement"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:insetLeft="0dp"
-                        android:insetTop="0dp"
-                        android:insetRight="0dp"
-                        android:insetBottom="0dp"
                         android:padding="0dp"
                         android:text="+"
                         android:textSize="20sp"
                         app:cornerRadius="24dp" />
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnEliminarProducto"
                         android:layout_width="wrap_content"
                         android:layout_height="48dp"
                         android:layout_marginStart="8dp"
@@ -140,6 +143,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <!-- Botones de Acción -->
             <LinearLayout
                 android:id="@+id/actionButtons"
                 android:layout_width="match_parent"
@@ -148,6 +152,7 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAgregarProducto"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="0dp"
                     android:layout_height="56dp"
@@ -158,9 +163,10 @@
                     app:cornerRadius="8dp" />
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRealizarPedido"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="0dp"
                     android:layout_height="56dp"
-                    android:layout_marginStart="8dp"
                     android:layout_weight="1"
                     android:text="Realizar Pedido"
                     android:textSize="14sp"
@@ -169,17 +175,63 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
+    <!-- Detalle de los productos en el carrito -->
     <TextView
-        android:id="@+id/titleInformacion"
+        android:id="@+id/titleDetalleCarrito"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Información del Pedido"
+        android:text="Detalle del Carrito"
         android:textColor="#4CAF50"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@id/cartCard" />
+
+    <!-- Listado de productos en el carrito -->
+    <LinearLayout
+        android:id="@+id/productListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/titleDetalleCarrito">
+
+        <!-- Ejemplo de item de producto en carrito -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:id="@+id/productItemName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Producto 1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/productItemQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/productItemPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S/ 10.00"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Puedes agregar más items de productos aquí, por ejemplo con un ListView o RecyclerView -->
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,9 +18,15 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.josemanuel.agrohub.databinding.FragmentVistaConsumidorBinding;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class VistaConsumidorFragment extends Fragment {
 
     private FragmentVistaConsumidorBinding binding;
+
+    // Lista para el carrito de compras
+    private List<String> shoppingCart = new ArrayList<>();
 
     // Opciones del menú
     private static final String[] MENU_OPTIONS = {
@@ -47,7 +53,6 @@ public class VistaConsumidorFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
 
         String usuario = VistaConsumidorFragmentArgs.fromBundle(getArguments()).getCORREO();
 
@@ -77,10 +82,25 @@ public class VistaConsumidorFragment extends Fragment {
                     .show();
         });
 
+        // Configurar el botón de agregar al carrito
+        Button addToCartButton = binding.addToCartButton;
+        addToCartButton.setOnClickListener(v -> addToCart("Arándanos"));
 
+    }
 
+    // Método para agregar un producto al carrito
+    private void addToCart(String productName) {
+        shoppingCart.add(productName);
+        showProductAddedDialog(productName);
+    }
 
-
+    // Método para mostrar un mensaje cuando se agrega un producto al carrito
+    private void showProductAddedDialog(String productName) {
+        new AlertDialog.Builder(requireContext())
+                .setTitle("Producto añadido")
+                .setMessage(productName + " ha sido añadido a tu carrito de compras.")
+                .setPositiveButton("Cerrar", null)
+                .show();
     }
 
     // Método para mostrar el menú emergente
@@ -131,25 +151,34 @@ public class VistaConsumidorFragment extends Fragment {
         // Realiza la acción deseada según la opción seleccionada
         switch (selectedOption) {
             case "Inicio":
+                // NavHostFragment.findNavController(VistaConsumidorFragment.this).navigate(
+                //       R.id.action_VistaConsumidorFragment_to_inicioFragment
+                //);
                 break;
             case "Nosotros":
+                // NavHostFragment.findNavController(VistaConsumidorFragment.this).navigate(
+                //       R.id.action_VistaConsumidorFragment_to_nosotrosFragment
+                // );
                 break;
             case "Carrito de compras":
                 NavHostFragment.findNavController(VistaConsumidorFragment.this).navigate(
-                        R.id.action_VistaConsumidorFragmente_to_carritoComprasFragmente
+                        R.id.action_VistaConsumidorFragment_to_cncarritoComprasFragment
                 );
                 break;
             case "Productos":
-                NavHostFragment.findNavController( VistaConsumidorFragment.this).navigate(
-                        R.id.action_VistaConsumidorFragmente_to_productosFragmente
+                NavHostFragment.findNavController(VistaConsumidorFragment.this).navigate(
+                        R.id.action_VistaConsumidorFragment_to_productosFragment
                 );
                 break;
             case "Pedidos":
+                //NavHostFragment.findNavController(VistaConsumidorFragment.this).navigate(
+                //      R.id.action_VistaConsumidorFragment_to_pedidosFragment
+                // );
                 break;
             case "Cerrar sesión":
-
-
-
+                //    NavHostFragment.findNavController(VistaConsumidorFragment.this).navigate(
+                //          R.id.action_VistaConsumidorFragment_to_loginFragment
+                // );
                 break;
         }
     }
