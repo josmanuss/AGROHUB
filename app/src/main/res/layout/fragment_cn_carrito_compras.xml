@@ -189,7 +189,7 @@
         app:layout_constraintStart_toStartOf="@id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@id/cartCard" />
 
-    <!-- Listado de productos en el carrito -->
+    <!-- Listado de Productos en el carrito -->
     <LinearLayout
         android:id="@+id/productListContainer"
         android:layout_width="match_parent"

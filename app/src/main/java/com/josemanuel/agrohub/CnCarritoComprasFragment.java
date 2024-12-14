@@ -31,7 +31,7 @@ public class CnCarritoComprasFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Configuración inicial
+        // Configuración Inicial
         binding.productQuantity.setText(String.valueOf(cantidadProducto));
 
         // Botón para aumentar la cantidad

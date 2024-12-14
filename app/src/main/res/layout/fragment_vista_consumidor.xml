@@ -93,7 +93,7 @@
             android:gravity="center"
             android:layout_marginBottom="16dp" />
 
-        <!-- CardView para imagen y precio -->
+        <!-- CardView para imagen y precioo -->
         <androidx.cardview.widget.CardView
             android:id="@+id/productCard"
             android:layout_width="match_parent"
