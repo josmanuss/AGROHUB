@@ -31,7 +31,8 @@ public class PreCargaFragment extends Fragment {
         binding.buttonContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mostrarDialogoSeleccion();
+                NavHostFragment.findNavController(PreCargaFragment.this)
+                        .navigate(R.id.action_PreCargaFragment_to_LoginFragment);
             }
         });
         return binding.getRoot();
